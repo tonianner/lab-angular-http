@@ -16,7 +16,7 @@
       <li ng-repeat='criminal in all'>
         <span
           class="status"
-          ng-class="{'alive' : criminal.status=='alive' , 'dead' : criminal.status=='dead'}">
+          ng-class="{'alive' : criminal.status=='ALIVE' , 'dead' : criminal.status=='DEAD'}">
           {{ criminal.status }}
         </span>
 
@@ -39,12 +39,12 @@
       <label> Status: </label>
       <select ng-model="newCriminal.status">
         <option value="" disabled="disabled" selected="selected"> - - Please select one - - </option>
-        <option value="unknown">Unknown</option>
-        <option value="dead">Dead</option>
-        <option value="alive">Alive</option>
+        <option value="UNKNOWN">Unknown</option>
+        <option value="DEAD">Dead</option>
+        <option value="ALIVE">Alive</option>
       </select>
-      <button type="reset" class="btn">Reset</button>
       <input type="submit" value="Add Criminal">
+      <input type="reset" value="clear">
     </form>
 
     <hr>
@@ -64,10 +64,9 @@
 
       <label> Status: </label>
       <select ng-model="editCriminal.status">
-        <option value="" disabled="disabled" selected="selected"> - - Please select one - - </option>
-        <option value="unknown">Unknown</option>
-        <option value="dead">Dead</option>
-        <option value="alive">Alive</option>
+        <option value="UNKNOWN">Unknown</option>
+        <option value="DEAD">Dead</option>
+        <option value="ALIVE">Alive</option>
       </select>
       <input type="submit" value="Update Criminal Record">
     </form>

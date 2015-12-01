@@ -48,6 +48,7 @@ angular.module('TheCriminalsApp', [])
 
     function showCriminal(criminal) {
       $scope.editCriminal = criminal
+      console.log($scope.editCriminal.status)
     }
 
     function updateCriminal(id) {
