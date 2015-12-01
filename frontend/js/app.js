@@ -1,1 +1,3 @@
-angular.module('CriminalApp',[])
+// angular.module('CriminalApp',[])
+
+angular.module('TheCriminalsApp', []);
