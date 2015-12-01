@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="CriminalApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="js/app.js"</script>
+  <script src="js/criminalController.js"</script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-controller="CriminalCtrl">
+
+  <h1> Infamous Criminals </h1>
+
+  <ul id="criminals">
+    <li ng-repeat='criminal in all'>
+      <span class="status alive"> criminal.status </span>
+      <strong> criminalname </strong>
+      <em> criminal.location </em>
+      <button class="delete"> X </button>
+    </li>
+  </ul>
+
+
+  <form id="newCriminal">
+    <label> Name: </label>
+    <input type="text" placeholder ="Prof.Moriarty">
+
+    <label> Location: </label>
+    <input type="text" placeholder="Reichenbach Falls, CH">
+
+    <label> Status: </label>
+    <select>
+      <option value="" disabled="disabled" selected="selected"> - - Please select one - - </option>
+      <option value="unknown">Unknown</option>
+      <option value="dead">Dead</option>
+      <option value="alive">Alive</option>
+    </select>
+
+    <input type="submit" value="Add Criminal">
+  </form>
+
+</body>
+</html>
